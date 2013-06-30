@@ -7,22 +7,24 @@ set :database, "sqlite3:///ichat.db"
 
 
 get '/' do
-  @messages = Message.all
-  erb :messages
+  erb :show
 end
 
-get '/reset' do
-   # Reset the messages
-  "Messages reset!"
-end
 
 post '/' do
   # TODO: Read the message contents, save to the database
 
 end
 
-class Message < ActiveRecord::Base
+get '/admin' do
+end
 
-  # TODO: Use this class as a table in the database
+helpers do
+
+  def link_to(url,text=url,opts={})
+    attributes = ""
+    opts.each { |key,value| attributes << key.to_s << "=\"" << value << "\" "}
+    "<a href=\"#{url}\" #{attributes}>#{text}</a>"
+  end
 
 end

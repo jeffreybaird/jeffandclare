@@ -1,0 +1,11 @@
+<nav>
+    <%= link_to '/#about-us', 'About Us' %>
+    <%= link_to '/#registries', 'Registries' %>
+    <%= link_to '/#ceremony', 'Ceremony' %>
+    <%= link_to '/#things-to-do', 'Things To-Do in Tampa' %>
+</nav>
+
+<%= erb(:'partials/about_us', :layout => false) %>
+<%= erb(:'partials/registry', :layout => false) %>
+<%= erb(:'partials/cermony', :layout => false) %>
+<%= erb(:'partials/things_to_do', :layout => false) %>

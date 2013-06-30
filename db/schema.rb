@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130628140745) do
+ActiveRecord::Schema.define(version: 20130628235247) do
 
-  create_table "messages", force: true do |t|
-    t.string "content"
-    t.string "sender"
-    t.string "receiver"
+  create_table "invitations", force: true do |t|
+    t.string  "party_name"
+    t.string  "email"
+    t.integer "number_invited"
+    t.string  "address1"
+    t.string  "address2"
+    t.string  "city"
+    t.string  "state"
+    t.string  "zip"
+  end
+
+  create_table "rsvps", force: true do |t|
+    t.string  "party_name"
+    t.string  "number_attending"
+    t.integer "invitation_id"
+    t.string  "gift"
   end
 
 end
