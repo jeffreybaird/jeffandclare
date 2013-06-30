@@ -3,7 +3,7 @@ require 'json'
 require "sinatra/activerecord"
 
 
-set :database, "sqlite3:///ichat.db"
+set :database, "sqlite3:///rsvps.db"
 
 
 get '/' do
