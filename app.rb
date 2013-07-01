@@ -17,6 +17,7 @@ post '/' do
 end
 
 get '/admin' do
+  erb :rsvp
 end
 
 helpers do

@@ -6,6 +6,7 @@ gem 'json'
 gem 'sqlite3'
 gem 'rake'
 gem 'typhoeus'
+gem 'sass'
 
 gem 'activerecord'
 gem 'sinatra-activerecord'
