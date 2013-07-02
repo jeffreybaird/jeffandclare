@@ -7,6 +7,7 @@ gem "pg"
 gem 'rake'
 gem 'typhoeus'
 gem 'sass'
+gem 'activerecord-nulldb-adapter'
 
 gem 'activerecord'
 gem 'sinatra-activerecord'

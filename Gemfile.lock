@@ -10,6 +10,8 @@ GEM
       activesupport (= 4.0.0)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
+    activerecord-nulldb-adapter (0.2.3)
+      activerecord (>= 2.0.0)
     activesupport (4.0.0)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
@@ -31,6 +33,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
+    pg (0.15.1)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -55,7 +58,6 @@ GEM
     sinatra-activerecord (1.2.3)
       activerecord (>= 3.0)
       sinatra (~> 1.0)
-    sqlite3 (1.3.7)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -77,13 +79,14 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  activerecord-nulldb-adapter
   json
+  pg
   rake
   sass
   shotgun
   sinatra
   sinatra-activerecord
-  sqlite3
   thin
   tux
   typhoeus
