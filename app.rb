@@ -20,6 +20,12 @@ class JeffAndClare < Sinatra::Base
 
   get '/' do
     erb :show
+    @locations = Location.all
+
+    @locations.each do |location|
+      location.category = Category.find(location.category_id)
+    end
+
   end
 
 

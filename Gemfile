@@ -11,11 +11,11 @@ gem 'typhoeus'
 gem 'sass'
 gem 'activerecord-nulldb-adapter'
 gem 'unicorn'
+gem "tux"
 
 gem 'activerecord'
 gem 'sinatra-activerecord'
 
 group :development do
   gem "shotgun"
-  gem "tux"
 end
