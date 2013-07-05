@@ -1,7 +1,8 @@
+$color1: #0e83cd
+$text-on-white: #89867e
+
 body
   font-family: 'Merriweather Sans', sans-serif
-  background-image: url('../img/ticks.png')
-  background-repeat: repeat
   font-weight: 400
 
 nav
@@ -10,24 +11,34 @@ nav
   position: fixed
   font-weight: 700
   font-size: 1.25em
-  color: #666
-  background-color: #666
+  background-color: #fff
   width: 100%
 
 .smoothScroll
   text-decoration: none
   padding: 30px
-  color: #666 * 2
+  color: $text-on-white
 
+div.color1
+  color: #fff
+  background-color: $color1
+
+div.color2
+  color: $text-on-white
+  background-color: #fff
+
+div#color3
+  color: #fff
+  background-color: $color1
+  margin-bottom: 60px
 
 section
-  color: #666
+  // color: #666
   text-shadow: 5px
   text-align: center
   width: 70%
   margin: auto
   padding: 10px 5px 30px 5px
-  border-bottom: thin solid #666
 
   h1
     text-align: center
@@ -57,32 +68,56 @@ section
 #registries
   border-bottom: none
 
-.btn
+  .btn
+    border: none
+    font-family: inherit
+    font-size: inherit
+    color: inherit
+    background: none
+    cursor: pointer
+    padding: 25px 80px
+    margin: 15px 30px
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-weight: 700
+    outline: none
+    position: relative
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
 
-  border: none
-  font-size: 2em
-  margin: 13px
-  margin-bottom: 30px
-  background: #bdc3c7 / 1.5
-  color: #ffffff
-  padding: 18px 24px 20px 10px
-  line-height: 22px
-  text-decoration: none
-  text-shadow: none
-  -webkit-border-radius: 6px
-  -moz-border-radius: 6px
-  border-radius: 6px
-  -webkit-box-shadow: none
-  -moz-box-shadow: none
-  box-shadow: none
-  -webkit-transition: 0.25s
-  -moz-transition: 0.25s
-  -o-transition: 0.25s
-  transition: 0.25s
-  -webkit-backface-visibility: hidden
+  .btn-1
+    border: 3px solid #fff
+    color: #fff
 
-.regstry-buttons
-  margin: 20px
+  .btn-1e
+    overflow: hidden
+
+  .btn-1e:after
+    width: 100%
+    height: 0
+    top: 50%
+    left: 50%
+    background: #fff
+    opacity: 0
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    transform: translateX(-50%) translateY(-50%) rotate(45deg)
+
+
+  .btn-1e:hover,
+  .btn-1e:active
+    background-color: #fff
+    color: $text-on-white
+
+  .btn-1e:hover:after
+    height: 260%
+    opacity: 1
+
+  .btn-1e:active:after
+    height: 400%
+    opacity: 1
 
 .header-img
   max-width: 100%
@@ -98,7 +133,7 @@ section
   margin: auto
   padding: 0% 2% 0px 2%
   float: left
-  border-right: thin dashed #333
+  border-right: thin dashed $text-on-white
 
 .clare
   width: 45%

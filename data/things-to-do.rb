@@ -1,5 +1,3 @@
-
-
 {
   :things_to_do =>
   [{:category => 'Food',
@@ -200,3 +198,16 @@
         :description =>" is a great little local pub that Jeff likes."
       }]}]
 }
+
+x[:things_to_do].each do |h|
+  cat_id = Category.find_by_name(h[:category]).id
+  h[:establishments].each do |e|
+   Location.create(:category_id => cat_id, :name => e[:name], :description => e[:description])
+ end
+end
+
+x[:things_to_do].each do |h|
+  h[:establishments].each do |e|
+    i += 1
+  end
+end
