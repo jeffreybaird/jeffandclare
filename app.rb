@@ -19,13 +19,14 @@ ActiveRecord::Base.establish_connection(
 class JeffAndClare < Sinatra::Base
 
   get '/' do
-    erb :show
+
     @locations = Location.all
 
     @locations.each do |location|
-      location.category = Category.find(location.category_id)
+      puts location
+      # location.contentsategory = Category.find(location.category_id)
     end
-
+    erb :show
   end
 
 
