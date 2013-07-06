@@ -36,6 +36,9 @@ GEM
     multi_json (1.7.7)
     pg (0.15.1)
     rack (1.4.1)
+    rack-flash3 (1.0.1)
+      rack
+      rack
     rack-protection (1.2.0)
       rack
     rack-test (0.6.2)
@@ -60,6 +63,9 @@ GEM
     sinatra-activerecord (1.2.3)
       activerecord (>= 3.0)
       sinatra (~> 1.0)
+    sinatra_warden (0.3.2)
+      sinatra (>= 1.0.0)
+      warden (~> 1.0)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -79,6 +85,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.1)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -88,11 +96,13 @@ DEPENDENCIES
   activerecord-nulldb-adapter
   json
   pg
+  rack-flash3 (= 1.0.1)
   rake
   sass
   shotgun
   sinatra
   sinatra-activerecord
+  sinatra_warden
   thin
   tux
   typhoeus

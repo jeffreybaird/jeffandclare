@@ -11,3 +11,5 @@ configure :production, :development do
       :encoding => 'utf8'
   )
 end
+
+configure(:development) { set :session_secret, "something" }

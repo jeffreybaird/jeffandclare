@@ -1,0 +1,28 @@
+<div class="color2">
+  <section id="things-to-do">
+
+
+
+
+      <h2>Tampa Bay Area activities</h2>
+
+      <p>
+        Here’s an <a href="http://nymag.com/travel/weekends/tampa/">article</a> from New York Magazine that highlights a few Tampa features.
+      </p>
+
+      <p>
+        And below are our lists. I’m trying to keep them at least semi-balanced, but you should know where my priorities lie: food.
+      </p>
+      <% @categories.each do |category| %>
+
+      <h3><%= category.name %></h3>
+      <%if category.subtitle%>
+        <p><%= category.subtitle %></p>
+      <%end%>
+      <% category.locations.each do |location| %>
+        <p><b><%= link_to(location.link, location.name, {:target=> "_blank"})%>: </b><%= location.description %></p>
+      <%end%>
+
+    <% end %>
+  <section>
+</div>

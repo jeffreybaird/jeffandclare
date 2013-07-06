@@ -200,6 +200,7 @@
 }
 
 x[:things_to_do].each do |h|
+  Category.create(:name => h[:category], :subtitle => h[:subtitle])
   cat_id = Category.find_by_name(h[:category]).id
   h[:establishments].each do |e|
    Location.create(:category_id => cat_id, :name => e[:name], :description => e[:description])

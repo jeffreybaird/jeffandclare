@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130703183243) do
+ActiveRecord::Schema.define(version: 20130706171646) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20130703183243) do
     t.integer "category_id"
     t.string  "name"
     t.text    "description"
-    t.integer "link"
+    t.string  "link"
   end
 
   create_table "rsvps", force: true do |t|
@@ -40,6 +40,11 @@ ActiveRecord::Schema.define(version: 20130703183243) do
     t.string  "number_attending"
     t.integer "invitation_id"
     t.string  "gift"
+  end
+
+  create_table "users", force: true do |t|
+    t.string "user_name"
+    t.string "password"
   end
 
 end

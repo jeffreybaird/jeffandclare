@@ -1,0 +1,17 @@
+<form action="/locations/<%= @location.id %>" method="post">
+
+  <input type="hidden" name="_method" value="put" />
+
+  <label>Name:</label><input type="string" name="location[name]" value="<%= @location.name %>"><br>
+
+  <label>Link:</label><input type="string" name="location[link]" value="<%= @location.link %>"><br>
+
+  <label>Description:</label>
+    <textarea rows="5" cols="50" name="location[description]">
+      <%= @location.description %>
+    </textarea><br>
+    <input type="submit" value="Edit Location" />
+
+</form>
+
+
