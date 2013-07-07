@@ -52,8 +52,7 @@ class JeffAndClare < Sinatra::Base
 
   get "/protected", :auth => :user do
     "Hello, #{@user.user_name}."
-    @locations = Location.all
-    @categories = Category.all
+    @locations = Location.all.sort_by(&:id)
     erb :admin, :layout => false
   end
 
