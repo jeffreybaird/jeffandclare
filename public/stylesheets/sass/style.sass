@@ -1,5 +1,6 @@
-$color1: #0e83cd
+$color1: #23238E
 $text-on-white: #89867e
+$white: #F0EAD6
 
 body
   font-family: 'Georgia', serif
@@ -11,7 +12,8 @@ nav
   position: fixed
   font-weight: 700
   font-size: 1.25em
-  background-color: #fff
+  background-color: $color1
+  color: $white
   width: 100%
 
 img
@@ -20,28 +22,27 @@ img
 .smoothScroll
   text-decoration: none
   padding: 30px
-  color: $text-on-white
+  color: $white
 
 div.color1
-  color: #fff
+  color: $white
   background-color: $color1
 
 div.color2
   color: $text-on-white
-  background-color: #fff
+  background-color: $white
 
 div#color3
-  color: #fff
+  color: $white
   background-color: $color1
   margin-bottom: 60px
 
 section
-  // color: #666
   text-shadow: 5px
   text-align: center
   width: 70%
   margin: auto
-  padding: 10px 5px 30px 5px
+  padding: 10px 5px 100px 5px
 
   h1
     text-align: center
@@ -49,12 +50,12 @@ section
     font-size: 4em
 
   h2
-    font-family: 'Merriweather Sans', sans-serif
+    font-family: 'Georgia', serif
     font-weight: 700
     font-size: 2.5em
 
   h3
-    font-family: 'Merriweather Sans', sans-serif
+    font-family: 'Georgia', serif
     font-weight: 700
     font-size: 1.5em
 
@@ -90,8 +91,8 @@ section
     transition: all 0.3s
 
   .btn-1
-    border: 3px solid #fff
-    color: #fff
+    border: 3px solid $white
+    color: $white
 
   .btn-1e
     overflow: hidden
@@ -101,7 +102,7 @@ section
     height: 0
     top: 50%
     left: 50%
-    background: #fff
+    background: $white
     opacity: 0
     -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
     -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
@@ -111,7 +112,7 @@ section
 
   .btn-1e:hover,
   .btn-1e:active
-    background-color: #fff
+    background-color: $white
     color: $text-on-white
 
   .btn-1e:hover:after
@@ -149,4 +150,14 @@ section
   padding: 40px
   height: 100%
   width: 100%
+  float: left
+
+.map
+  width: 425px
+  height: 350px
+
+.two-columns
+  width: 45%
+  margin: auto
+  padding: 0% 2% 0px 2%
   float: left
