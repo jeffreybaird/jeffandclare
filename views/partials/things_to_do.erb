@@ -4,15 +4,12 @@
 
 
 
-      <h2>Tampa Bay Area activities</h2>
+      <h2>To Do in Tampa</h2>
 
       <p>
-        Here’s an <a href="http://nymag.com/travel/weekends/tampa/">article</a> from New York Magazine that highlights a few Tampa features.
+        Here’s an <%= link_to("http://nymag.com/travel/weekends/tampa/", "article") %> from New York Magazine that highlights a few Tampa features, and below are Jeff and Clare's recommendations.
       </p>
 
-      <p>
-        And below are our lists. I’m trying to keep them at least semi-balanced, but you should know where my priorities lie: food.
-      </p>
       <% @categories.each do |category| %>
 
       <h3><%= category.name %></h3>
