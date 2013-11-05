@@ -1,19 +1,28 @@
+require 'rubygems'
+require 'bundler'
+
+# Bundler.require
 require 'sinatra'
 require 'json'
+require 'omniauth'
+require 'omniauth-instagram'
 require 'sinatra_warden'
 require "sinatra/activerecord"
 require './config/environments'
 require 'rack-flash'
+require 'figaro'
+
 Dir.glob('./lib/*.rb') { |file| require file }
-
-
-# set :database, "sqlite3:///rsvps.db"
 
 
 
 class JeffAndClare < Sinatra::Base
   set :sessions => true
   use Rack::MethodOverride
+  use Rack::Session::Cookie
+  use OmniAuth::Builder do
+    provider :instagram, ENV['INSTAGRAM_ID'], ENV['INSTAGRAM_SECRET']
+  end
 
   register do
     def auth (type)
@@ -81,6 +90,7 @@ class JeffAndClare < Sinatra::Base
   # Main App routes
 
   get '/' do
+    puts Figaro.env.hello
 
     @locations = Location.all
     @categories = Category.all
@@ -93,17 +103,6 @@ class JeffAndClare < Sinatra::Base
 
     erb :show
   end
-
-
-  post '/' do
-    # TODO: Read the message contents, save to the database
-
-  end
-
-
-
-
-
 
 
   helpers do
@@ -120,4 +119,18 @@ class JeffAndClare < Sinatra::Base
 
   end
 
+end
+
+module Figaro
+  def path
+    @path ||= File.join(JeffAndClare.settings.root, "config", "application.yml")
+  end
+
+  def environment
+    JeffAndClare.settings.environment
+  end
+end
+
+Figaro.env.each do |key, value|
+  ENV[key] = value unless ENV.key?(key)
 end

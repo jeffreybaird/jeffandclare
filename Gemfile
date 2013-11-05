@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem 'sinatra'
-gem 'thin'
 gem 'json'
 gem 'rack-flash3', '1.0.1', require: 'rack/flash'
 gem "pg"
@@ -14,6 +13,9 @@ gem 'activerecord-nulldb-adapter'
 gem 'unicorn'
 gem "tux"
 gem 'sinatra_warden'
+gem 'omniauth'
+gem 'omniauth-instagram'
+gem 'figaro'
 
 gem 'activerecord'
 gem 'sinatra-activerecord'
